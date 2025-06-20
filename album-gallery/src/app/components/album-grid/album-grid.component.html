@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    @for(album of albums; track album.id) {
+    <div class="card h-100" (click)="openAlbum(album)" style="cursor: pointer">
+      <img
+        [src]="album.coverImage"
+        class="card-img-top"
+        alt="{{ album.name }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title text-center">{{ album.name }}</h5>
+      </div>
+    </div>
+    }
+  </div>
+</div>
